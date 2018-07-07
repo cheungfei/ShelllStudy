@@ -1,0 +1,26 @@
+一、查看自己安装的软件包：
+apt list --installed or  atp list --installed | grep jre
+
+二、Ubuntu软件安装方法：
+1、APT方式
+(1)普通安装: apt-get install softname1 softname2 ...;
+(2)修复安装: apt-get -f install softname1 softname2 ...;(-f Attempt to correct broken dependencies)
+(3)重新安装: apt-get --reinstall install softname1 softname2 ... ;
+2、DPKG安装
+普通安装: dpkg -i package_name.deb
+3、源码安装(.tar, .tar.gz, .tar.bz2, .tar.Z)
+一般依次执行：
+./configure
+make
+sudo make install
+
+三、Ubuntu软件包卸载方法：
+1、APT方式
+(1)移除式卸载：apt-get remove softname1 softname2 ...
+(2)清除式卸载：apt-get --purge remove softname1 softname2 ...(同时清除配置)
+(3)清除式卸载：apt-get purge softname1 softname2 ...(同上，清除配置文件)
+2、DPKG方式
+(1)移除式卸载：dpkg -r pkg1 pkg2 ...
+(2)清除式卸载：dpkg -r pkg1 pkg2 ...
+
+
